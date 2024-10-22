@@ -586,7 +586,7 @@ const frontPage = (options) => {
 
                 // Add cardlink
                 let cardKey = Object.keys(selectKitiguars[0])[0];
-                for (var i in selectKitiguars) { selectDesigns[i].cardlink = folderURL + "/kitiguarsmasterlist.html?" + cardKey + "=" + selectKitiguars[i][cardKey]; }
+                for (var i in selectKitiguars) { selectKitiguars[i].cardlink = folderURL + "/kitiguarsmasterlist.html?" + cardKey + "=" + selectKitiguars[i][cardKey]; }
 
                 // Nyoom
                 let galleryOptions = {
@@ -608,7 +608,7 @@ const frontPage = (options) => {
     // Characters
     let addCharacters = async () => {
         if ($("#characters-gallery").length != 0) {
-            if (charadexInfo.numOfDesigns != 0) {
+            if (charadexInfo.numOfCharacters != 0) {
 
                 // Grab dah sheet
                 let characters = await fetchSheet(charadexInfo.novasCharactersSheetPage);
@@ -617,7 +617,7 @@ const frontPage = (options) => {
                 let selectCharacters = characters.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfCharacters);
 
                 // Add cardlink
-                let cardKey = Object.keys(selectDesigns[0])[0];
+                let cardKey = Object.keys(selectCharacters[0])[0];
                 for (var i in selectCharacters) { selectCharacters[i].cardlink = folderURL + "/characters.html?" + cardKey + "=" + selectCharacters[i][cardKey]; }
 
                 // Nyoom
