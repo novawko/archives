@@ -38,10 +38,10 @@ let options = {
         friendsSheetPage: sheetPages.friends,
         numOfFriends: 8,
 
-        masterlistSheetPage: sheetPages.novasCharacters,
+        novasCharactersSheetPage: sheetPages.novasCharacters,
         numOfCharacters: 4,
 		
-	masterlistSheetPage: sheetPages.kitiguarsMasterlist,
+	kitiguarsMasterlistSheetPage: sheetPages.kitiguarsMasterlist,
         numOfKitiguars: 4,
     
     },
