@@ -41,7 +41,7 @@ let options = {
         masterlistSheetPage: sheetPages.novasCharacters,
         numOfDesigns: 4,
 		
-		masterlistSheetPage: sheetPages.kitiguarsMasterlist,
+	masterlistSheetPage: sheetPages.kitiguarsMasterlist,
         numOfDesigns: 4,
     
     },
