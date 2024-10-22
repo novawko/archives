@@ -579,7 +579,7 @@ const frontPage = (options) => {
             if (charadexInfo.numOfKitiguars != 0) {
 
                 // Grab dah sheet
-                let designs = await fetchSheet(charadexInfo.kitiguarsmasterlistSheetPage);
+                let designs = await fetchSheet(charadexInfo.kitiguarsMasterlistSheetPage);
 
                 // Filter out any MYO slots, reverse and pull the first 4
                 let selectKitiguars = kitiguars.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfKitiguars);
@@ -636,57 +636,6 @@ const frontPage = (options) => {
     }; addCharacters();
 
 }; 
-
-    // Empty log hide for Nova's Characters
-        let container = document.querySelector('.novasCharactersLog');
-
-        // Loop over all elements in the scope
-        container.querySelectorAll('*').forEach(el => {
-  
-        // Checks that it's an empty text element and that it's not a self-closing element like <img>, <br> or <hr>
-          if (!el.children.length && // no children
-          el.textContent.trim() === '' && // its empty
-		  el.nodeName !== 'IMG' && // not an image
-		  el.nodeName !== 'BR' && // not a <br>
-		  el.nodeName !== 'HR' // not a <hr>
-    ) {
-  
-		// adds the is-empty class
-		  el.classList.add('is-empty');
-  
-		// but if it is an image, check if its src is empty
-		  } else if (el.nodeName === 'IMG' && el.getAttribute('src') === '') {
-   
-		// adds the is-empty class to <img> elements with an empty src attribute
-		  el.classList.add('is-empty');
-	}
-});
-
-    // Empty log hide for Kitiguars Masterlist
-        let container = document.querySelector('.kitiguarsMasterlistLog');
-
-        // Loop over all elements in the scope
-        container.querySelectorAll('*').forEach(el => {
-  
-        // Checks that it's an empty text element and that it's not a self-closing element like <img>, <br> or <hr>
-          if (!el.children.length && // no children
-          el.textContent.trim() === '' && // its empty
-		  el.nodeName !== 'IMG' && // not an image
-		  el.nodeName !== 'BR' && // not a <br>
-		  el.nodeName !== 'HR' // not a <hr>
-    ) {
-  
-		// adds the is-empty class
-		  el.classList.add('is-empty');
-  
-		// but if it is an image, check if its src is empty
-		  } else if (el.nodeName === 'IMG' && el.getAttribute('src') === '') {
-   
-		// adds the is-empty class to <img> elements with an empty src attribute
-		  el.classList.add('is-empty');
-	}
-});
-
 
 /* ==================================================================== */
 /* Softload pages
