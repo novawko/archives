@@ -38,10 +38,10 @@ let options = {
         staffSheetPage: sheetPages.friends,
         numOfFriends: 8,
 
-        MasterlistSheetPage: sheetPages.novasCharacters,
+        masterlistSheetPage: sheetPages.novasCharacters,
         numOfCharacters: 4,
 		
-	MasterlistSheetPage: sheetPages.kitiguarsMasterlist,
+	masterlistSheetPage: sheetPages.kitiguarsMasterlist,
         numOfKitiguars: 4,
     
     },
