@@ -36,13 +36,13 @@ let options = {
         numOfPrompts: 3,
 
         staffSheetPage: sheetPages.friends,
-        numOfFriends: 8,
+        numOfStaff: 8,
 
         masterlistSheetPage: sheetPages.novasCharacters,
-        numOfCharacters: 4,
+        numOfDesigns: 4,
 		
 	masterlistSheetPage: sheetPages.kitiguarsMasterlist,
-        numOfKitiguars: 4,
+        numOfDesigns: 4,
     
     },
 
