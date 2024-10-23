@@ -582,7 +582,7 @@ const frontPage = (options) => {
                 let designs = await fetchSheet(charadexInfo.kitiguarsMasterlistSheetPage);
 
                 // Filter out any MYO slots, reverse and pull the first 4
-                let selectDesigns = designs.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfKitiguars);
+                let selectDesigns = designs.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfDesigns);
 
                 // Add cardlink
                 let cardKey = Object.keys(selectDesigns[0])[0];
