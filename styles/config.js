@@ -38,10 +38,10 @@ let options = {
         friendsSheetPage: sheetPages.friends,
         numOfFriends: 8,
 
-        novasCharactersSheetPage: sheetPages.novasCharacters,
+        MasterlistSheetPage: sheetPages.novasCharacters,
         numOfCharacters: 4,
 		
-	kitiguarsMasterlistSheetPage: sheetPages.kitiguarsMasterlist,
+	MasterlistSheetPage: sheetPages.kitiguarsMasterlist,
         numOfKitiguars: 4,
     
     },
@@ -49,7 +49,7 @@ let options = {
 
     /* Kitiguars Masterlist
     /* --------------------------------------------------------------- */
-    kitiguarsMasterlist: {
+    Masterlist: {
 
         sheetPage: sheetPages.kitiguarsMasterlist,
         logSheetPage: sheetPages.kitiguarsMasterlistLog,
@@ -65,7 +65,7 @@ let options = {
 	
     /* Nova's Characters
     /* --------------------------------------------------------------- */
-    novasCharacters: {
+    Masterlist: {
 
         sheetPage: sheetPages.novasCharacters,
         logSheetPage: sheetPages.novasCharactersLog,
