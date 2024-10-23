@@ -548,92 +548,92 @@ const frontPage = (options) => {
     }; addEvents();
 
     // Friends
-    let addFriends = async () => {
+    let addStaff = async () => {
         if ($("#friends-gallery").length != 0) {
-            if (charadexInfo.numOfFriends != 0) {
+            if (charadexInfo.numOfStaff != 0) {
 
                 // Grab dah sheet
-                let friends = await fetchSheet(charadexInfo.friendsSheetPage);
+                let mods = await fetchSheet(charadexInfo.friendsSheetPage);
 
                 // Show x Amount on Index
-                let indexFriends = friends.slice(0, charadexInfo.numOfFriends);
+                let indexMods = mods.slice(0, charadexInfo.numOfStaff);
 
                 // Nyoom
                 let galleryOptions = {
                     item: 'friends-item',
-                    valueNames: sheetArrayKeys(indexFriends),
+                    valueNames: sheetArrayKeys(indexMods),
                 };
 
                 // Render Gallery
-                let charadex = new List('friends-gallery', galleryOptions, indexFriends);
+                let charadex = new List('friends-gallery', galleryOptions, indexMods);
 
             } else {
                 $("#friends-gallery").hide();
             }
         }
-    }; addFriends();
+    }; addStaff();
 
     // Kitiguars
-    let addKitiguars = async () => {
+    let addDesigns = async () => {
         if ($("#kitiguars-gallery").length != 0) {
-            if (charadexInfo.numOfKitiguars != 0) {
+            if (charadexInfo.numOfDesigns != 0) {
 
                 // Grab dah sheet
                 let designs = await fetchSheet(charadexInfo.kitiguarsMasterlistSheetPage);
 
                 // Filter out any MYO slots, reverse and pull the first 4
-                let selectKitiguars = kitiguars.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfKitiguars);
+                let selectDesigns = designs.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfKitiguars);
 
                 // Add cardlink
-                let cardKey = Object.keys(selectKitiguars[0])[0];
-                for (var i in selectKitiguars) { selectKitiguars[i].cardlink = folderURL + "/kitiguarsmasterlist.html?" + cardKey + "=" + selectKitiguars[i][cardKey]; }
+                let cardKey = Object.keys(selectDesigns[0])[0];
+                for (var i in selectDesigns) { selectKitiguars[i].cardlink = folderURL + "/kitiguarsmasterlist.html?" + cardKey + "=" + selectDesigns[i][cardKey]; }
 
                 // Nyoom
                 let galleryOptions = {
                     item: 'kitiguars-item',
-                    valueNames: sheetArrayKeys(selectKitiguars),
+                    valueNames: sheetArrayKeys(selectDesigns),
                 };
 
                 // Render Gallery
-                let charadex = new List('kitiguars-gallery', galleryOptions, selectKitiguars);
+                let charadex = new List('kitiguars-gallery', galleryOptions, selectDesigns);
 
             } else {
                 $("#kitiguars-gallery").hide();
             }
         }
-    }; addKitiguars();
+    }; addDesigns();
 
 }; 
 
     // Characters
-    let addCharacters = async () => {
+    let addDesigns = async () => {
         if ($("#characters-gallery").length != 0) {
-            if (charadexInfo.numOfCharacters != 0) {
+            if (charadexInfo.numOfDesigns != 0) {
 
                 // Grab dah sheet
-                let characters = await fetchSheet(charadexInfo.novasCharactersSheetPage);
+                let designs = await fetchSheet(charadexInfo.novasCharactersSheetPage);
 
                 // Filter out any MYO slots, reverse and pull the first 4
-                let selectCharacters = characters.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfCharacters);
+                let selectDesigns = designs.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfDesigns);
 
                 // Add cardlink
-                let cardKey = Object.keys(selectCharacters[0])[0];
-                for (var i in selectCharacters) { selectCharacters[i].cardlink = folderURL + "/characters.html?" + cardKey + "=" + selectCharacters[i][cardKey]; }
+                let cardKey = Object.keys(selectDesigns[0])[0];
+                for (var i in selectDesigns) { selectDesigns[i].cardlink = folderURL + "/characters.html?" + cardKey + "=" + selectDesigns[i][cardKey]; }
 
                 // Nyoom
                 let galleryOptions = {
                     item: 'characters-item',
-                    valueNames: sheetArrayKeys(selectCharacters),
+                    valueNames: sheetArrayKeys(selectDesigns),
                 };
 
                 // Render Gallery
-                let charadex = new List('characters-gallery', galleryOptions, selectCharacters);
+                let charadex = new List('characters-gallery', galleryOptions, selectDesigns);
 
             } else {
                 $("#characters-gallery").hide();
             }
         }
-    }; addCharacters();
+    }; addDesigns();
 
 }; 
 
