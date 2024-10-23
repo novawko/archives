@@ -49,7 +49,7 @@ let options = {
 
     /* Kitiguars Masterlist
     /* --------------------------------------------------------------- */
-    Masterlist: {
+    masterlist: {
 
         sheetPage: sheetPages.kitiguarsMasterlist,
         logSheetPage: sheetPages.kitiguarsMasterlistLog,
@@ -65,7 +65,7 @@ let options = {
 	
     /* Nova's Characters
     /* --------------------------------------------------------------- */
-    Masterlist: {
+    masterlist: {
 
         sheetPage: sheetPages.novasCharacters,
         logSheetPage: sheetPages.novasCharactersLog,
