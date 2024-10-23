@@ -10,14 +10,14 @@ let sheetID = "1V1l2MQSRTKofZb0Y3JJ8qyak4Iutf8pLhhCybdAIsWw";
 /* ------------------------------------------------------------------- */
 let sheetPages = {
 
-    kitiguarsMasterlist: "kitiguars masterlist",
-    kitiguarsMasterlistLog: "kitiguars masterlist log",
-    news: "news",
-    novasCharactersLog: "nova's characters log",
-    novasCharacters: "nova's characters",
+    masterlist: "kitiguars masterlist",
+    masterlistLog: "kitiguars masterlist log",
+    faq: "news",
+    masterlistLog: "nova's characters log",
+    masterlist: "nova's characters",
     prompts: "prompts",
     faq: "faq",
-    friends: "friends",
+    staff: "friends",
 
 }
 
@@ -35,7 +35,7 @@ let options = {
         promptSheetPage: sheetPages.prompts,
         numOfPrompts: 3,
 
-        friendsSheetPage: sheetPages.friends,
+        staffSheetPage: sheetPages.friends,
         numOfFriends: 8,
 
         MasterlistSheetPage: sheetPages.novasCharacters,
@@ -96,7 +96,7 @@ let options = {
 
     /* Friends List
     /* --------------------------------------------------------------- */
-    friends: {
+    staff: {
     
         sheetPage: sheetPages.friends,
     
@@ -119,7 +119,7 @@ let options = {
 
     /* News
     /* --------------------------------------------------------------- */
-    news: {
+    faq: {
     
         sheetPage: sheetPages.news,
     
