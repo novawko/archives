@@ -248,6 +248,12 @@ a:active {
   font-size: 2rem;
 }
 
+@media (min-width: 768px) {
+    .navbar .navbar-brand {
+        font-size: 0.5rem;
+    }
+}
+
 .navbar .navbar-brand:hover, 
 .navbar .navbar-brand:focus {
   color: var(--cd-navbar-brand-color-hover) !important;
