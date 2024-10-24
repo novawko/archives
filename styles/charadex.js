@@ -548,30 +548,30 @@ const frontPage = (options) => {
     }; addEvents();
 
     // Friends
-    let addStaff = async () => {
+    let addFriends = async () => {
         if ($("#friends-gallery").length != 0) {
-            if (charadexInfo.numOfStaff != 0) {
+            if (charadexInfo.numOfFriends != 0) {
 
                 // Grab dah sheet
-                let mods = await fetchSheet(charadexInfo.friendsSheetPage);
+                let friends = await fetchSheet(charadexInfo.friendsSheetPage);
 
                 // Show x Amount on Index
-                let indexMods = mods.slice(0, charadexInfo.numOfStaff);
+                let indexFriends = friends.slice(0, charadexInfo.numOfFriends);
 
                 // Nyoom
                 let galleryOptions = {
                     item: 'friends-item',
-                    valueNames: sheetArrayKeys(indexMods),
+                    valueNames: sheetArrayKeys(indexFriends),
                 };
 
                 // Render Gallery
-                let charadex = new List('friends-gallery', galleryOptions, indexMods);
+                let charadex = new List('friends-gallery', galleryOptions, indexFriends);
 
             } else {
                 $("#friends-gallery").hide();
             }
         }
-    }; addStaff();
+    }; addFriends();
 
     // Kitiguars
     let addKitiguars = async () => {
