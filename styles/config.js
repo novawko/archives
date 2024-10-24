@@ -39,10 +39,10 @@ let options = {
         numOfStaff: 8,
 
         masterlistSheetPage: sheetPages.novasCharacters,
-        numOfDesigns: 4,
+        numOfCharacters: 4,
 		
 	masterlistSheetPage: sheetPages.kitiguarsMasterlist,
-        numOfDesigns: 4,
+        numOfKitiguars: 4,
     
     },
 
