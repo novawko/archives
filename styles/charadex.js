@@ -603,8 +603,6 @@ const frontPage = (options) => {
         }
     }; addDesigns();
 
-}; 
-
     // Characters
     let addDesigns = async () => {
         if ($("#characters-gallery").length != 0) {
