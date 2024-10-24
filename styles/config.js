@@ -18,6 +18,7 @@ let sheetPages = {
     prompts: "prompts",
     faq: "faq",
     friends: "friends",
+    fanart: "fanart",
 
 }
 
@@ -76,6 +77,21 @@ let options = {
         filterColumn: 'Design Type',
         searchFilterParams: ['ID', 'Designer', 'Artist'],
         fauxFolderColumn: 'Gender',
+
+    },
+
+    /* Art For Me
+    /* --------------------------------------------------------------- */
+    fanart: {
+
+        sheetPage: sheetPages.fanart,
+
+        itemAmount: 12,
+        itemOrder: "asc",
+
+        filterColumn: 'Art Type',
+        searchFilterParams: ['ID', 'Artist'],
+        fauxFolderColumn: 'Art Type',
 
     },
 
