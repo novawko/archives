@@ -576,13 +576,13 @@ const frontPage = (options) => {
     // Kitiguars
     let addKitiguar = async () => {
         if ($("#kitiguars-gallery").length != 0) {
-            if (charadexInfo.numOfDesigns != 0) {
+            if (charadexInfo.numOfKitiguar != 0) {
 
                 // Grab dah sheet
                 let kitiguar = await fetchSheet(charadexInfo.kitiguarsMasterlistSheetPage);
 
                 // Filter out any MYO slots, reverse and pull the first 4
-                let selectKitiguar = kitiguar.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfDesigns);
+                let selectKitiguar = kitiguar.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfKitiguar);
 
                 // Add cardlink
                 let cardKey = Object.keys(selectDesigns[0])[0];
