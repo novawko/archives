@@ -574,34 +574,34 @@ const frontPage = (options) => {
     }; addStaff();
 
     // Kitiguars
-    let addDesigns = async () => {
+    let addKitiguar = async () => {
         if ($("#kitiguars-gallery").length != 0) {
             if (charadexInfo.numOfDesigns != 0) {
 
                 // Grab dah sheet
-                let designs = await fetchSheet(charadexInfo.kitiguarsMasterlistSheetPage);
+                let kitiguar = await fetchSheet(charadexInfo.kitiguarsMasterlistSheetPage);
 
                 // Filter out any MYO slots, reverse and pull the first 4
-                let selectDesigns = designs.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfDesigns);
+                let selectKitiguar = kitiguar.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfDesigns);
 
                 // Add cardlink
                 let cardKey = Object.keys(selectDesigns[0])[0];
-                for (var i in selectDesigns) { selectKitiguars[i].cardlink = folderURL + "/kitiguarsmasterlist.html?" + cardKey + "=" + selectDesigns[i][cardKey]; }
+                for (var i in selectKitiguar) { selectKitiguar[i].cardlink = folderURL + "/kitiguarsmasterlist.html?" + cardKey + "=" + selectKitiguar[i][cardKey]; }
 
                 // Nyoom
                 let galleryOptions = {
                     item: 'kitiguars-item',
-                    valueNames: sheetArrayKeys(selectDesigns),
+                    valueNames: sheetArrayKeys(selectKitiguar),
                 };
 
                 // Render Gallery
-                let charadex = new List('kitiguars-gallery', galleryOptions, selectDesigns);
+                let charadex = new List('kitiguars-gallery', galleryOptions, selectKitiguar);
 
             } else {
                 $("#kitiguars-gallery").hide();
             }
         }
-    }; addDesigns();
+    }; addKitiguar();
 
     // Characters
     let addDesigns = async () => {
