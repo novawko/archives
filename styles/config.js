@@ -75,7 +75,7 @@ let options = {
 
         filterColumn: 'Design Type',
         searchFilterParams: ['ID', 'Designer', 'Artist'],
-        fauxFolderColumn: 'Species',
+        fauxFolderColumn: 'Gender',
 
     },
 
@@ -126,7 +126,7 @@ let options = {
         itemAmount: 24,
         itemOrder: "asc",
 
-	searchFilterParams: ['Tags'],
+	searchFilterParams: ['Date'],
     
     },
 
