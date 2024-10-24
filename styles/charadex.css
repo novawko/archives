@@ -248,7 +248,7 @@ a:active {
   font-size: 2rem;
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) {
     .navbar .navbar-brand {
         font-size: 1rem;
     }
